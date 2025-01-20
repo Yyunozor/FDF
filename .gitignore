@@ -24,3 +24,5 @@ a.out
 
 # Debug files
 *.dSYM/
+
+app
