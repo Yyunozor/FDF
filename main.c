@@ -6,7 +6,7 @@
 /*   By: anpayot <anpayot@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 22:01:33 by anpayot           #+#    #+#             */
-/*   Updated: 2025/01/20 22:23:29 by anpayot          ###   ########.fr       */
+/*   Updated: 2025/01/20 23:57:37 by anpayot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ typedef struct s_data
 	
 }	t_data;
 
-int	handle_key(int keycode, t_data *data)
+int	print_key(int keycode, t_data *data)
 {
 	(void)data; // Suppress unused parameter warning
-	char str[50];
+	char str[32];
 	mlx_clear_window(data->mlx, data->win);
 	sprintf(str, "Key pressed: %d", keycode); // need to be recode
 	mlx_string_put(data->mlx, data->win, 10, 20, 0xFFFFFF, str);
@@ -39,10 +39,10 @@ int	handle_key(int keycode, t_data *data)
 	return (0);
 }
 
-int	handle_mouse(int button, int x, int y, t_data *data)
+int	print_mouse(int button, int x, int y, t_data *data)
 {
 	(void)data; // Suppress unused parameter warning
-	char str[50];
+	char str[32];
 	mlx_clear_window(data->mlx, data->win);
 	sprintf(str, "Mouse button %d at (%d, %d)", button, x, y);
 	mlx_string_put(data->mlx, data->win, 10, 40, 0xFFFFFF, str);
@@ -63,8 +63,8 @@ int	main(void)
 	img.mlx = mlx;
 	img.win = mlx_win;
 	
-	mlx_hook(mlx_win, 2, 1L<<0, handle_key, &img);
-	mlx_hook(mlx_win, 4, 1L<<2, handle_mouse, &img);
+	mlx_hook(mlx_win, 2, 1L<<0, print_key, &img);
+	mlx_hook(mlx_win, 4, 1L<<2, print_mouse, &img);
 	mlx_hook(mlx_win, 17, 0, mlx_destroy_window, &img);
 	mlx_loop(mlx);
 }
