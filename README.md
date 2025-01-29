@@ -29,11 +29,19 @@ The FDF project involves creating a 3D wireframe representation of a landscape u
 ### **1.3 Study Required Concepts**
 
 - Understand key algorithms:
+<<<<<<< HEAD
     - **Xiaolin Wu's line algorithm** (anti-aliased rendering).
     - **Bresenham's line algorithm** (for comparison and simpler scenarios).
 - Review projection techniques:
     - **Isometric projection** for the primary 3D visualization.
     - **Orthographic projection** as an optional feature for alternative views.
+=======
+    - **Xiaolin Wu's line algorithm** (anti-aliased rendering).
+    - **Bresenham's line algorithm** (for comparison and simpler scenarios).
+- Review projection techniques:
+    - **Isometric projection** for the primary 3D visualization.
+    - **Orthographic projection** as an optional feature for alternative views.
+>>>>>>> bd767e739339be9c7c9867dd2e22df27151f4645
 - Study MiniLibX functionalities:
     - Window management.
     - Pixel drawing.
@@ -45,14 +53,24 @@ The FDF project involves creating a 3D wireframe representation of a landscape u
 
 ### **2.1 Line Drawing Algorithms**
 
+<<<<<<< HEAD
 - Implement **Xiaolin Wu's line algorithm** for smooth, anti-aliased line rendering.
 - Develop a fallback using **Bresenham's algorithm** for performance-critical scenarios.
+=======
+- Implement **Xiaolin Wu's line algorithm** for smooth, anti-aliased line rendering.
+- Develop a fallback using **Bresenham's algorithm** for performance-critical scenarios.
+>>>>>>> bd767e739339be9c7c9867dd2e22df27151f4645
 - Optimize both algorithms for edge cases (e.g., steep slopes, very long lines).
 
 ### **2.2 Projection Techniques**
 
+<<<<<<< HEAD
 - Implement **isometric projection** as the default.
 - Add support for switching to **orthographic projection** for an alternative flat view.
+=======
+- Implement **isometric projection** as the default.
+- Add support for switching to **orthographic projection** for an alternative flat view.
+>>>>>>> bd767e739339be9c7c9867dd2e22df27151f4645
 - Create dynamic projection adjustment (zoom, rotation, and scaling).
 
 ### **2.3 Color Management**
